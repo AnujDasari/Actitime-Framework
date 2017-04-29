@@ -1,0 +1,46 @@
+
+{
+	
+   "capabilities":
+		
+     [
+
+        {   
+"browserName": "chrome",
+
+	    "maxInstances": 2			
+        },
+
+	{
+	    "browserName": "firefox",
+            "maxInstances": 2	
+	},
+	{
+            "browserName": "internet explorer",
+            "maxInstances": 2
+        } 	
+     
+],
+	
+
+   "configuration":
+		
+        { 
+"port":5557,
+			
+          "hubPort":4444,
+			
+          "hubHost":"localhost",
+			
+          "registerCycle":10000,
+			
+          "register":true,
+			
+          "timeout":30000,
+			
+          "maxSession":2
+,
+          "Dwebdriver.ie.driver=IEDriverServer.exe": ""		
+        }
+
+}

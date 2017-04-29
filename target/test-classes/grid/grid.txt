@@ -1,0 +1,9 @@
+#To configure a hub
+java -jar <selenium server standalone> -role hub
+ex: java -jar selenium-server-standalone-2.53.0.jar -role hub
+
+#To configure a node
+java -jar <selenium server standalone> -role node -nodeConfig <config file>
+ex1: java -jar selenium-server-standalone-2.53.0.jar -role node -nodeConfig Firefox-Node.json
+ex2: java -jar selenium-server-standalone-2.53.0.jar -role node -nodeConfig Chrome-Node.json
+ex3: java -jar selenium-server-standalone-2.53.0.jar -role node -nodeConfig InternetExplorer-Node.json
