@@ -1,4 +1,4 @@
-# actiTimeProject
+# Actitime-Framework Project
 A simple framework to run Functional and UI Test Scripts for actiTIME application. The same framework can be used to run scripts - in Desktop browsers(firefox,chrome and internet explorer); in chrome browser on Android Device; and to run scripts on a Native Android App. 
 
 Sample test scripts have been written to execute test scripts across three platforms - Desktop, Device and App.
