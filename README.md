@@ -59,5 +59,5 @@ To run scripts in grid:
 
 
 ### Setup and Installation of the Framework
-Refer to the wiki page **https://github.com/AnujDasari/ActiTimeProject/wiki** for details on setting up and installing the framework.
+Refer to the wiki page **https://github.com/AnujDasari/Actitime-Framework/wiki** for details on setting up and installing the framework.
 
