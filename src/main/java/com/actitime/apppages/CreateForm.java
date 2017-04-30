@@ -75,47 +75,53 @@ public class CreateForm extends BasePage {
 	 * This methods creates a new form
 	 **/
 	public boolean createNewForm() {
-		HelperManager.explicitWait(firstNameTextBox, driver);
-		firstNameTextBox.sendKeys(FileUtilityManager.getTestData().get(
-				"First_Name"));
-		lastNameTextBox.sendKeys(FileUtilityManager.getTestData().get(
-				"Last_Name"));
-		emailTextBox.sendKeys(FileUtilityManager.getTestData().get(
-				"Email_Address"));
-		phoneNumberTextBox.sendKeys(FileUtilityManager.getTestData().get(
-				"Phone"));
-		String gender = FileUtilityManager.getTestData().get("Gender");
-		HelperManager.scrollDown(driver);
-		if (gender.equalsIgnoreCase("male")) {
-			maleGenderRadioBtn.click();
-		} else {
-			femaleGenderRadioBtn.click();
+		try {
+
+			HelperManager.explicitWait(firstNameTextBox, driver);
+			firstNameTextBox.sendKeys(FileUtilityManager.getTestData().get(
+					"First_Name"));
+			lastNameTextBox.sendKeys(FileUtilityManager.getTestData().get(
+					"Last_Name"));
+			emailTextBox.sendKeys(FileUtilityManager.getTestData().get(
+					"Email_Address"));
+			phoneNumberTextBox.sendKeys(FileUtilityManager.getTestData().get(
+					"Phone"));
+
+			String gender = FileUtilityManager.getTestData().get("Gender");
+			HelperManager.scrollDown(driver);
+			if (gender.equalsIgnoreCase("male")) {
+				maleGenderRadioBtn.click();
+			} else {
+				femaleGenderRadioBtn.click();
+			}
+			streetTextBox.sendKeys(FileUtilityManager.getTestData().get(
+					"Street"));
+		} catch (NullPointerException e) {
+			e.printStackTrace();
 		}
-		streetTextBox.sendKeys(FileUtilityManager.getTestData().get("Street"));
 		try {
 			countryDropDown.click();
 			int countriesCount = 0;
-			//Iterator<WebElement> it = countryList.iterator();
+			// Iterator<WebElement> it = countryList.iterator();
 			while (countriesCount < 11) {
 				for (int i = 0; i < countryList.size(); i++) {
-						String country = countryList.get(i).getText();
-						if (country.equalsIgnoreCase(FileUtilityManager
-								.getTestData().get("Country"))) {
-							countriesCount = 12;
-							countryList.get(i).click();
-							break;
-						} else if (!(country
-								.equalsIgnoreCase(FileUtilityManager
-										.getTestData().get("Country")))) {
-							countriesCount++;
-							if (countriesCount == 11) {
-								countriesCount = 0;
-								HelperManager.scrollDown(driver);
-								continue;
-							}
+					String country = countryList.get(i).getText();
+					if (country.equalsIgnoreCase(FileUtilityManager
+							.getTestData().get("Country"))) {
+						countriesCount = 12;
+						countryList.get(i).click();
+						break;
+					} else if (!(country.equalsIgnoreCase(FileUtilityManager
+							.getTestData().get("Country")))) {
+						countriesCount++;
+						if (countriesCount == 11) {
+							countriesCount = 0;
+							HelperManager.scrollDown(driver);
+							continue;
 						}
-					}		
+					}
 				}
+			}
 		} catch (NoSuchElementException e) {
 			return false;
 		}
@@ -146,7 +152,7 @@ public class CreateForm extends BasePage {
 		} catch (NoSuchElementException e) {
 			return false;
 		}
-		
+
 		HelperManager.scrollDown(driver);
 		HelperManager.scrollDown(driver);
 		String hobbies = FileUtilityManager.getTestData().get("Hobbies");
