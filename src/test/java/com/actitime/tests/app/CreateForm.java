@@ -1,7 +1,6 @@
 package com.actitime.tests.app;
 
 import org.testng.annotations.Test;
-
 import com.actitime.reports.ExtentReport;
 import com.actitime.reports.ReportNGReport;
 import com.actitime.tests.base.BaseTest;
@@ -26,6 +25,6 @@ public class CreateForm extends BaseTest {
 			test.log(Status.INFO, "Failed to create a new form");
 			ExtentReport.captureAndDisplayScreenShot(driver, test);
 		}
-		
+
 	}
 }

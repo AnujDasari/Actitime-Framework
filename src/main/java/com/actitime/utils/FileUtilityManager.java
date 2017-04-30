@@ -45,6 +45,7 @@ public class FileUtilityManager {
 			} else if (env.equalsIgnoreCase("Device")) {
 				sh = wb.getSheet("Device");
 			} else if (env.equalsIgnoreCase("App")) {
+				System.out.println("In App sheet");
 				sh = wb.getSheet("App");
 			}
 			Row rheader = sh.getRow(0);
@@ -80,7 +81,7 @@ public class FileUtilityManager {
 	}
 
 	/*
-	 * Method to get all classes set to 'Y' 
+	 * Method to get all classes set to 'Y'
 	 */
 	public static ArrayList<String> getFlaggedClasses(String sheetname) {
 		ArrayList<String> testCaseToExecute = new ArrayList<>();
@@ -113,7 +114,7 @@ public class FileUtilityManager {
 	}
 
 	/*
-	 * Method to get all classes set to 'N' 
+	 * Method to get all classes set to 'N'
 	 */
 	public static ArrayList<String> getNotFlaggedClasses(String sheetname) {
 		ArrayList<String> testCaseNotToExecute = new ArrayList<>();
@@ -147,7 +148,7 @@ public class FileUtilityManager {
 	}
 
 	/*
-	 * Method to get sheet name 
+	 * Method to get sheet name
 	 */
 	public static ArrayList<String> getSheetNameMethods() {
 		try {
