@@ -1,4 +1,4 @@
 language: java
 sudo: false
 install: true
-script: mvn clean compile
+script: mvn test -DrunOn=standalone -Dplatforme=desktop -Dbrowser=chrome
