@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="actiTIME - chrome Smoke"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.603">
+  <properties />
+  
+  
+            <testcase name="createUser" time="15.603" classname="com.actitime.tests.web.CreateUser" />
+      
+</testsuite>

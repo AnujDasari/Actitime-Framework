@@ -10,11 +10,11 @@ import org.testng.annotations.Parameters;
 import com.actitime.driver.Driver;
 import com.actitime.driver.DriverFactory;
 import com.actitime.reports.ExtentReport;
-import com.actitime.webpages.WebDashboard;
-import com.actitime.webpages.WebLogin;
-import com.actitime.webpages.WebUsers;
-import com.actitime.apppages.*;
-import com.actitime.devicepages.*;
+import com.actitime.web_pages.WebDashboard;
+import com.actitime.web_pages.WebLogin;
+import com.actitime.web_pages.WebUsers;
+import com.actitime.app_pages.*;
+import com.actitime.device_pages.*;
 
 /*
  * BaseTest 

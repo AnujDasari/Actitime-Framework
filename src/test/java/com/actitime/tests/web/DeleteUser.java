@@ -18,14 +18,18 @@ public class DeleteUser extends BaseTest{
 		test = extent.createTest("DeleteUser", "Verify User is Deleted");
 		FileUtilityManager.retrieveData("DeleteUser");
 		String deleteUser = FileUtilityManager.getTestData().get("Full_Name");
+		
 		webLoginPO.login();
 		webDashBoardPO.navigateToUsers();
-		boolean deleteUserStatus = webUsersPO.deleteUser(deleteUser);
+		Boolean deleteUserStatus = webUsersPO.deleteUser(deleteUser);
+		
 		if (deleteUserStatus) {
 			test.pass("DeleteUser");
 			ExtentReport.captureAndDisplayScreenShot(driver, test);
 			ReportNGReport.captureScreenshot(driver, "DeleteExistingUser");
-		} else {
+		} 
+		
+		else {
 			test.log(Status.FAIL, "DeleteUser");
 			test.log(Status.INFO, deleteUser + ":No Such User Found!");
 			ExtentReport.captureAndDisplayScreenShot(driver, test);

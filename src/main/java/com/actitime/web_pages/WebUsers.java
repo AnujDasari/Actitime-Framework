@@ -1,14 +1,11 @@
-package com.actitime.webpages;
+package com.actitime.web_pages;
 
 import java.util.List;
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.actitime.pages.BasePage;
-import com.actitime.reports.ReportNGReport;
 import com.actitime.utils.FileUtilityManager;
 import com.actitime.utils.HelperManager;
 
@@ -90,7 +87,6 @@ public class WebUsers extends BasePage {
 				"Password"));
 		HelperManager.explicitWait(modalWindowClose, driver);
 		if (duplicateUserError.isDisplayed()) {
-			ReportNGReport.captureScreenshot(driver, "UserAddition");
 			modalWindowClose.click();
 			HelperManager.normalWait(driver, 5);
 			HelperManager.handleAlert("Y", driver);

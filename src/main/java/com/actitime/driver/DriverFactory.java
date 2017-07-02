@@ -4,10 +4,12 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,12 +17,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import com.actitime.apppages.CreateForm;
-import com.actitime.devicepages.DeviceDashboard;
-import com.actitime.devicepages.DeviceLogin;
-import com.actitime.webpages.WebDashboard;
-import com.actitime.webpages.WebLogin;
-import com.actitime.webpages.WebUsers;
+
+import com.actitime.app_pages.CreateForm;
+import com.actitime.device_pages.DeviceDashboard;
+import com.actitime.device_pages.DeviceLogin;
+import com.actitime.web_pages.WebDashboard;
+import com.actitime.web_pages.WebLogin;
+import com.actitime.web_pages.WebUsers;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 

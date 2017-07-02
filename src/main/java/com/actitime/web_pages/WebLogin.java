@@ -1,10 +1,12 @@
-package com.actitime.devicepages;
+package com.actitime.web_pages;
 
 import java.io.IOException;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import com.actitime.driver.Driver;
 import com.actitime.pages.BasePage;
 import com.actitime.utils.FileUtilityManager;
@@ -13,20 +15,20 @@ import com.actitime.utils.HelperManager;
 /**
  * ActiTime Login Page Object
  **/
-public class DeviceLogin extends BasePage{
+public class WebLogin extends BasePage {
 	@FindBy(css = "input#username")
-	private WebElement userName;
+	private WebElement username;
 
 	@FindBy(css = "input[type='password']")
-	private WebElement passWord;
+	private WebElement password;
 
 	@FindBy(css = "input[type='checkbox']")
-	private WebElement passWordChkBox;
+	private WebElement passwordChkBox;
 
 	@FindBy(css = "input#loginButton")
 	private WebElement logInBtn;
-
-	public DeviceLogin(WebDriver driver) {
+	
+	public WebLogin(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 	}
@@ -43,13 +45,12 @@ public class DeviceLogin extends BasePage{
 			} else if (Driver.getType().equalsIgnoreCase("Device")) {
 				driver.get(Driver.getDeviceUrl());
 			}
-			HelperManager.implicitWait(driver);
-			userName.sendKeys(FileUtilityManager.getTestData().get("UserID"));
-			passWord.sendKeys(FileUtilityManager.getTestData().get("Pwd"));
-			passWord.sendKeys(Keys.TAB);
-			passWord.sendKeys(Keys.TAB);
-			passWord.sendKeys(Keys.ENTER);
-			HelperManager.normalWait(driver, 2);
+			username.sendKeys(FileUtilityManager.getTestData().get("UserID"));
+			password.sendKeys(FileUtilityManager.getTestData().get("Pwd"));
+			password.sendKeys(Keys.TAB);
+			password.sendKeys(Keys.TAB);
+			password.sendKeys(Keys.ENTER);
+			HelperManager.normalWait(driver, 5);
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
@@ -57,3 +58,20 @@ public class DeviceLogin extends BasePage{
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

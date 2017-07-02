@@ -37,6 +37,7 @@
 				<configuration>
 					<mainClass>com.actitime.driver.Driver</mainClass>
 				</configuration>
+
 			</plugin>
 
 			<plugin>

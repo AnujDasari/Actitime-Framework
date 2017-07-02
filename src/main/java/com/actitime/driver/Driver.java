@@ -7,8 +7,6 @@ import com.actitime.utils.XMLUtilityManager;
  **/
 public class Driver extends DriverManager {
 	
-	
-	
 	/**
 	 * Main method
 	 **/

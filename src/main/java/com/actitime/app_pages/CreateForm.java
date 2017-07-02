@@ -1,4 +1,4 @@
-package com.actitime.apppages;
+package com.actitime.app_pages;
 
 import java.util.Arrays;
 import java.util.List;

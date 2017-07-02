@@ -3,13 +3,16 @@ package com.actitime.reports;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
 import com.actitime.driver.Driver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 /*
@@ -44,7 +47,7 @@ public class ExtentReport {
 
 	public static ExtentReports getExtent() {
 		if (extent != null)
-			return extent; 
+			return extent;
 		extent = new ExtentReports();
 		extent.attachReporter(getHtmlReporter());
 		return extent;
@@ -78,6 +81,15 @@ public class ExtentReport {
 			eTest.addScreenCaptureFromPath(screenshotPath);
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
+		}
+	}
+
+	public static void assertTest(ExtentTest test, String testName,
+			Object actual, Object expected) {
+		if (actual.equals(expected)) {
+			test.pass(testName);
+		} else {
+			test.log(Status.FAIL, testName);
 		}
 	}
 }
