@@ -1,4 +1,4 @@
 language: java
 sudo: false
 install: true
-script: mvn test -DrunOn=standalone -Dplatforme=desktop -Dbrowser=chrome
+script: mvn test -DrunOn=standalone -Dplatform=desktop -Dbrowser=chrome
