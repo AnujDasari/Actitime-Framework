@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="15.603">
+           time="17.390">
   <properties />
   
   
-            <testcase name="createUser" time="15.603" classname="com.actitime.tests.web.CreateUser" />
+            <testcase name="createUser" time="17.390" classname="com.actitime.tests.web.CreateUser" />
       
 </testsuite>

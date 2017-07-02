@@ -36,7 +36,7 @@ public class FileUtilityManager {
 	public static void retrieveData(String TestCaseDataId) {
 		try {
 			FileInputStream fis = new FileInputStream(
-					"./src/test/resources/excel_lib/TestData.csv");
+					"./src/test/resources/data_lib/TestData.csv");
 			Workbook wb = WorkbookFactory.create(fis);
 			Sheet sh = null;
 			String env = Driver.getType();
@@ -87,7 +87,7 @@ public class FileUtilityManager {
 		ArrayList<String> testCaseToExecute = new ArrayList<>();
 		try {
 			FileInputStream fis = new FileInputStream(
-					"./src/test/resources/excel_lib/XMLFlag.csv");
+					"./src/test/resources/data_lib/XMLFlag.csv");
 			Workbook wb = WorkbookFactory.create(fis);
 			Sheet sh = wb.getSheet(sheetname);
 			int i = 0;
@@ -121,7 +121,7 @@ public class FileUtilityManager {
 		try {
 
 			FileInputStream fis = new FileInputStream(
-					"./src/test/resources/excel_lib/XMLFlag.csv");
+					"./src/test/resources/data_lib/XMLFlag.csv");
 			Workbook wb = WorkbookFactory.create(fis);
 			Sheet sh = wb.getSheet(sheetname);
 			int i = 0;
@@ -154,7 +154,7 @@ public class FileUtilityManager {
 		try {
 			sheetNames.clear();
 			FileInputStream fis = new FileInputStream(
-					"./src/test/resources/excel_lib/XMLFlag.csv");
+					"./src/test/resources/data_lib/XMLFlag.csv");
 			Workbook wb = WorkbookFactory.create(fis);
 			for (int i = 0; i < wb.getNumberOfSheets(); i++) {
 				sheetNames.add(wb.getSheetName(i));

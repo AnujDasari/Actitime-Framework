@@ -26,7 +26,7 @@ public class VerifyUser extends BaseTest {
 		if (verifyUserStatus) {
 			test.pass("VerifyExistingUser");
 			ExtentReport.captureAndDisplayScreenShot(driver, test);
-			ReportNGReport.captureScreenshot(driver, "DeleteExistingUser");
+			ReportNGReport.captureScreenshot(driver, "VerifyExistingUser");
 		} 
 		
 		else {
