@@ -31,7 +31,7 @@ Sample test scripts have been written to execute test scripts across three platf
 
 5. grid - This folder contains the node json config files to run in grid.
 
-6. excel_lib - This folder contains the XMLFlag and TestData test data sheets.   
+6. data_lib - This folder contains the XMLFlag and TestData test data sheets.   
     a.**TestData** sheet is used to set the test data for the scripts that are being automated.  
     b.**XMLFlag** sheet is used to set the test scripts that have to be automated or run.
     
@@ -46,7 +46,7 @@ Test Reports are generated under Resources folder:
 
 ### Running the Framework
 To run the scripts in desktop browser:
-`mvn test -DrunOn=standalone -Dplatforme=desktop -Dbrowser=chrome/firefox/internetexplorer`
+`mvn test -DrunOn=standalone -Dplatform=desktop -Dbrowser=chrome/firefox/internetexplorer`
 
 To run the scripts in device browser:
 `mvn test -DrunOn=standalone -Dplatform=device`
