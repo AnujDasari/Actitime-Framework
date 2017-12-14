@@ -3,6 +3,8 @@ A simple framework to run Functional and UI Test Scripts for actiTIME applicatio
 
 Sample test scripts have been written to execute test scripts across three platforms - Desktop, Device and App.
 
+------------------------------------------------------------------------
+
 ### Description of Project Files
 1. Driver.java : Contains java main method which runs the programmatically generated testng.xml.  
 
@@ -19,6 +21,8 @@ Sample test scripts have been written to execute test scripts across three platf
 7. ExtentReport.java : Contains Extent Report screenshot and report creation functionality.   
 
 8. ReportNGReport.java : Contains ReportNG Report screenshot and report creation functionality.
+
+------------------------------------------------------------------------
 
 ### Resource and .exe files
 1. chromedriver - This folder contains the chromedriver.exe.
@@ -39,10 +43,14 @@ Sample test scripts have been written to execute test scripts across three platf
     a.**config.properties** -  Contains properties to run scripts on desktop and device browser.  
     b.**grid_config.properties** - Contains properties to run scripts in parallel using grid.
     
+------------------------------------------------------------------------
+    
 ### Test Report
 Test Reports are generated under Resources folder:
 1. Extent Reports : `./Resources/ExtentReports`  
 2. ReportNG Reports : `./Resources/ReportNGReports`  
+
+------------------------------------------------------------------------
 
 ### Running the Framework
 To run the scripts in desktop browser:
@@ -57,6 +65,7 @@ To run app scripts:
 To run scripts in grid:
 `mvn test -DrunOn=grid -Dplatform=desktop` 
 
+------------------------------------------------------------------------
 
 ### Setup and Installation of the Framework
 Refer to the wiki page **https://github.com/AnujDasari/Actitime-Framework/wiki** for details on setting up and installing the framework.
